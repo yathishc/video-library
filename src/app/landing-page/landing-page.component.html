@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="qtr-margin-top">
+        <input type="text" class="form-control" id="searchId" aria-describedby="emailHelp" placeholder="Search Any Video...">
+    </div>
+
+
+    <div class="contents qtr-margin-top">
+        <div class="grid-container videos-list">
+            <div class="grid-item card" style="width: 18rem;" *ngFor="let video of videosArray">
+               <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                     <p class="card-text">{{video.snippet.title}}</p>
+                    <!-- <div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div> -->
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
